@@ -1,0 +1,103 @@
+
+ {% extends "layout.html" %}
+
+    {% block body %}
+        
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"> User Details</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive" style="overflow: inherit">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th >
+                        Name
+                      </th>
+{#                      <th>#}
+{#                        RFID No.#}
+{#                      </th>#}
+{#                      <th class="text-center">#}
+{#                          Parkings in this Month#}
+{#                      </th>#}
+{#                      <th class="text-center">#}
+{#                        Spent#}
+{#                      </th>#}
+                    </thead>
+                    <tbody>
+                    {% for email in emails %}
+                      <tr>
+                        <td><a style="color: black" href="/userprofile">
+                          {{email}}
+                        </a>
+                        </td>
+{#                        <td>#}
+{#                          Rt342jks78#}
+{#                        </td>#}
+{#                        <td class="text-center">#}
+{#                          24#}
+{#                        </td>#}
+{#                        <td class="text-center">#}
+{#                           $113#}
+{#                        </td>#}
+{#                      </tr>#}
+                    {% endfor %}
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+{#           <div class="col-md-12">#}
+{#            <div class="card card-plain">#}
+{#              <div class="card-header">#}
+{#                <h4 class="card-title"> Approved RFIDs</h4>#}
+{#                <p class="card-category"> Here is a subtitle for this table</p>#}
+{#              </div>#}
+{#              <div class="card-body">#}
+{#                <div class="table-responsive" style="overflow: auto; padding-right: 3rem">#}
+{#                  <table class="table">#}
+{#                    <thead class=" text-primary">#}
+{#                      <th>#}
+{#                        Name#}
+{#                      </th>#}
+{#                      <th>#}
+{#                        Region#}
+{#                      </th>#}
+{##}
+{#                      <th class="text-right">#}
+{#                        RFID#}
+{#                      </th>#}
+{#                    </thead>#}
+{#                    <tbody>#}
+{#                      <tr>#}
+{#                        <td>#}
+{#                          Dakota Rice#}
+{#                        </td>#}
+{#                        <td>#}
+{#                          Bhatkal#}
+{#                        </td>#}
+{##}
+{#                        <td class="text-right">#}
+{#                          Rt342jks78#}
+{#                        </td>#}
+{#                      </tr>#}
+{##}
+{#                    </tbody>#}
+{#                  </table>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+   {% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIRESPACZ</title>
+    <link rel="stylesheet" href="login.css">
+     <link  href="{{ url_for('static', filename='css/login.css')}}" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+          <div class="sign-in-section">
+            <h6>HIRE<i>SPACZ</i></h6>
+            
+            <h1>Log in</h1>
+
+            
+            <form action="/" method="post">
+              <div class="form-field">
+                <label for="email">Username</label>
+                <input name="username"id="email" type="input" placeholder="Username" />
+              </div>
+              <div class="form-field">
+                <label for="password" name="password">Password</label>
+                <input name="password" id="password" type="password" placeholder="Password" />
+              </div>
+             
+              <div class="form-field">
+                <input type="submit" onclick="window.location.href='/'" class="btn btn-signin" value="Submit" />
+              </div>
+            </form>
+         
+          </div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+ {% extends "layout.html" %}
+
+    {% block body %}
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+         <!-- --------------------------CARD 1----------------------------------------------- -->
+ {% for i in docs %}
+      {% set item_1 = docs[loop.index-1] %}
+      {% set item_2 = email[loop.index-1] %}
+         <div class="container">
+          <form class="cards" style="background-color:white; padding: 3rem; border-radius: 6px;
+          box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+          overflow: hidden; margin-bottom: 2rem;">
+
+            <div class="card-item">
+
+              <div class="card-info" style=" display: flex;
+              flex-direction: column;
+              background-color: #fff;
+              width: 100%;">
+                <h2 class="card-title">{{ item_2 }}</h2>
+   <p></p>
+
+
+              </div>
+{#              <button  type="button" class="btn btn-primary">View more</button>#}
+                <a href="/rfid_details/{{ item_1 }}" style=" color: white; text-decoration: none;;margin-top: 1rem;" class="viewmore">View more</a>
+            </div>
+
+
+
+
+
+              <!-- ------------------------------------------------------------------------------------ -->
+
+          </form>
+
+         </div>
+              {% endfor %}
+      </div>
+      </div>
+  <!--   Core JS Files   -->
+       <script>
+        setTimeout(function (){
+            location.reload();
+        },30000)
+        </script>
+   {% endblock %}

@@ -1,0 +1,34 @@
+
+
+
+ {% extends "layout.html" %}
+
+    {% block body %}
+      <!-- End Navbar -->
+      <div class="content" style="background:white;">
+        <div class="row" style="background:white;">
+          <div class="col-md-12"style="background:white;">
+            <div class="card "style="background:white;">
+              <div class="card-body "style="background:white;">
+                     <div id="map" class="map">
+          {% include 'mmap.html' | safe %}
+      </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+  <!--   Core JS Files   -->
+
+       {% endblock %}
+

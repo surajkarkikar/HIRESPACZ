@@ -1,0 +1,135 @@
+ {% extends "layout.html" %}
+
+    {% block body %}
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                            </div>
+                            <div class="card-body">
+
+
+
+
+
+
+
+                                <form action="/submit_rfid" method="post">
+
+
+
+
+                                    <div class="form-group row" style="left: 3%; font-weight: 600; font-size: 18px;">
+                                        <label class="col-sm-2 col-form-label">E-mail:</label>
+                                        <div class="col-sm-6">
+                                            <input readonly type="text" class="form-control-plaintext" name="email" value="{{ val[0] }}">
+                                        </div>
+                                    </div>
+                                         <div class="form-group row" style="left: 3%; font-weight: 600; font-size: 18px;">
+                                        <label class="col-sm-2 col-form-label">Rfid number:</label>
+                                        <div class="col-sm-6">
+                                            <input readonly type="text" class="form-control-plaintext" name="rfidno" value="{{ val[8] }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row" style="left: 3%; font-weight: 600; font-size: 18px;">
+                                        <label class="col-sm-2 col-form-label">Region</label>
+                                         <div class="col-sm-6">
+                                            <input type="text" readonly class="form-control-plaintext" name="region" value="{{ val[1]}}">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group row" style="left: 3%; font-weight: 600; font-size: 18px;">
+                                        <label class="col-sm-2 col-form-label">Brand:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" readonly class="form-control-plaintext" name="brand" value="{{ val[2]}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row" style="left: 3%; font-weight: 600; font-size: 18px;">
+                                        <label class="col-sm-2 col-form-label">Reg Number:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" readonly class="form-control-plaintext" name="regnumber" value="{{ val[3]}}">
+                                        </div>
+                                    </div>
+
+
+
+                                  <div class="form-group row" style="left: 3%; font-weight: 600; font-size: 18px;">
+                                        <label class="col-sm-2 col-form-label">Contact:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" readonly class="form-control-plaintext" name="contact" value="{{ val[5]}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row" style="left: 3%; font-weight: 600; font-size: 18px;">
+                                        <label class="col-sm-2 col-form-label">Category:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" readonly class="form-control-plaintext" name="category" value="{{ val[4]}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row" style="left: 3%; font-weight: 600; font-size: 18px;">
+                                        <label class="col-sm-2 col-form-label">Pincode:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" readonly class="form-control-plaintext" name="pincode" value="{{ val[6]}}">
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                            <input type="hidden" readonly class="form-control-plaintext" name="uid" value="{{ val[7]}}">
+
+                                    <div class="form-group" style="left: 3%; font-weight: 600; font-size: 18px; ">
+                                        <button type="button" class="btn btn-danger" onclick="window.location.href='/delete_rfid/{{ val[7] }}'">Reject <i class="fa fa-close"></i></button>
+                                        <button type="submit" class="btn btn-success" onclick="window.location.href='/submit_rfid'" active>Accept <i class="fa fa-check"></i></button>
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                                </form>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">         
+              </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <footer class="footer footer-black  footer-white ">
+                <div class="container-fluid">
+                    <div class="row">
+
+                    </div>
+                </div>
+        </div>
+        </footer>
+    </div>
+    </div>
+  {% endblock %}
